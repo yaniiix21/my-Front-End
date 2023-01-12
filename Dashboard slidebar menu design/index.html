@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Side-Bar Menu</title>
+   <!-- CSS Link -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Boxicons CSS -->
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <div class="container">
+      <div class="side-bar" id="side-bar">
+         <div class="nav-header">
+            <img src="images/admin.jpg" alt="">
+            <span></span>
+            <h2>Clark</h2>
+            <i class='bx bx-chevron-left' id="icon"></i>
+         </div>
+
+         <nav>
+            <ul>
+               <li>
+                  <i class='bx bxs-dashboard'></i>
+                  <span>dashboard</span>
+                  <i class='bx bx-slider-alt'></i>
+               </li>
+               <li>
+                  <i class='bx bx-folder'></i>
+                  <span>project</span>
+               </li>
+               <li>
+                  <i class='bx bx-star'></i>
+                  <span>stared</span>
+               </li>
+               <li>
+                  <i class='bx bx-bar-chart-square'></i>
+                  <span>analytice</span>
+               </li>
+               <li>
+                  <i class='bx bx-envelope'></i>
+                  <span>mail</span>
+               </li>
+               <li>
+                  <i class='bx bx-calendar'></i>
+                  <span>calendar</span>
+                  <i class='bx bx-plus-circle'></i>
+               </li>
+               <li>
+                  <i class='bx bx-bell'></i>
+                  <span>notification</span>
+                  <span class="dot"></span>
+               </li>
+
+            </ul>
+         </nav>
+
+         <hr>
+
+         <div class="settings">
+            <nav>
+               <ul>
+                  <li>
+                     <i class='bx bx-cog'></i>
+                     <span>settings</span>
+                  </li>
+                  <li>
+                     <i class='bx bx-help-circle'></i>
+                     <span>help</span>
+                  </li>
+                  <li>
+                     <i class='bx bx-log-out'></i>
+                     <span>logout</span>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      let sideBar = document.getElementById('side-bar');
+      let icon = document.getElementById('icon');
+
+      icon.onclick = () => {
+         sideBar.classList.toggle('toggle');
+         icon.classList.toggle('rotate-icon');
+      }
+   </script>
+</body>
+</html>

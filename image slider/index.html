@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Slider</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="slider"> 
+        <!-- 1 -->
+        <div class="slider__slide slider__slide--active" data-slide="1">
+            <div class="slider__wrap">
+                <div class="slider__back"></div>
+            </div>
+            <div class="slider__inner">
+                <div class="slider__content">
+                    <h1>Slider <br> One</h1><a href="" class="go-to-next">next</a>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="slider__slide" data-slide="2">
+            <div class="slider__wrap">
+                <div class="slider__back"></div>
+            </div>
+            <div class="slider__inner">
+                <div class="slider__content">
+                    <h1>Slider <br> Two</h1><a href="" class="go-to-next">next</a>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="slider__slide" data-slide="3">
+            <div class="slider__wrap">
+                <div class="slider__back"></div>
+            </div>
+            <div class="slider__inner">
+                <div class="slider__content">
+                    <h1>Slider <br> 3</h1><a href="" class="go-to-next">next</a>
+                </div>
+            </div>
+        </div>
+  
+        <div class="slider__indicators"></div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <!-- <script>
+$(document).ready(function () {
+    for (var i = 1; i <= $('.slider__slide').length; i++) {
+        $('.slider__indicators').append('<div class = "slider__indicator" data-slide = "' + i + '"></div>')
+    }
+    setTimeout(function () {
+        $('.slider__wrap').addClass('slider__wrap--hacked');
+    }, 1000);
+})
+function goToSlide(number) {
+    $('.slider__slide').removeClass('slider__slide--active');
+    $('.slider__slide[data-slide = ' + number + ']').addClass('slider__slide--active');
+}
+$('.slider__next, .go-to-next').on('click', function () {
+    var currentSlide = Number($('.slider__slide--active').data('slide'));
+    var totalSlides = $('.slider__slide').length;
+    currentSlide++
+    if (currentSlide > totalSlides) {
+        currentSlide = 1;
+    }
+    goToSlide(currentSlide);
+})
+    </script> -->
+</body>
+</html>
